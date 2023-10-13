@@ -1,0 +1,215 @@
+{
+  "settings": {
+    "hasHeaders": true,
+    "constrainDragToContainer": true,
+    "reorderEnabled": true,
+    "selectionEnabled": false,
+    "popoutWholeStack": false,
+    "blockedPopoutsThrowError": true,
+    "closePopoutsOnUnload": true,
+    "showPopoutIcon": false,
+    "showMaximiseIcon": false,
+    "showCloseIcon": false,
+    "responsiveMode": "onload",
+    "tabOverlapAllowance": 0,
+    "reorderOnTabMenuClick": true,
+    "tabControlOffset": 10
+  },
+  "dimensions": {
+    "borderWidth": 5,
+    "borderGrabWidth": 15,
+    "minItemHeight": 10,
+    "minItemWidth": 10,
+    "headerHeight": 20,
+    "dragProxyWidth": 300,
+    "dragProxyHeight": 200
+  },
+  "labels": {
+    "close": "close",
+    "maximise": "maximise",
+    "minimise": "minimise",
+    "popout": "open in new window",
+    "popin": "pop in",
+    "tabDropdown": "additional tabs"
+  },
+  "content": [
+    {
+      "type": "row",
+      "isClosable": true,
+      "reorderEnabled": true,
+      "title": "",
+      "content": [
+        {
+          "type": "stack",
+          "width": 50,
+          "isClosable": true,
+          "reorderEnabled": true,
+          "title": "",
+          "activeItemIndex": 0,
+          "content": [
+            {
+              "type": "component",
+              "componentName": "codeEditor",
+              "title": "case_bottom.json",
+              "componentState": {
+                "code": [
+                  "// Welcome to Cascade Studio!   Here are some useful functions:",
+                  "//  Translate(), Rotate(), Scale(), Mirror(), Union(), Difference(), Intersection()",
+                  "//  Box(), Sphere(), Cylinder(), Cone(), Text3D(), Polygon()",
+                  "//  Offset(), Extrude(), RotatedExtrude(), Revolve(), Pipe(), Loft(), ",
+                  "//  FilletEdges(), ChamferEdges(),",
+                  "//  Slider(), Checkbox(), TextInput(), Dropdown()",
+                  "",
+                  "// units are in mm",
+                  "",
+                  "let PCB_TOLERANCE = 0.5;",
+                  "",
+                  "let KEY_X = 10;",
+                  "let KEY_Y = 10;",
+                  "",
+                  "let NUM_KEYS_X = 12;",
+                  "let NUM_KEYS_Y = 4;",
+                  "",
+                  "let FLOOR_HEIGHT = 0.5;",
+                  "let WALL_HEIGHT = 3; // TODO: re-evaluate",
+                  "let WALL_THICKNESS = 2;",
+                  "let WALL_FOREHEAD = 1.6; // Used to give the USB a bit more room. Extra wall thickness at the top",
+                  "let WALL_INNER_FILLET_RADIUS = 1;",
+                  "let WALL_OUTER_FILLET_RADIUS = 2;",
+                  "let WALL_OUTER_UPPER_RADIUS = 1;",
+                  "let WALL_OUTER_LOWER_RADIUS = 1;",
+                  "",
+                  "let INNER_HOLE_RADIUS = 1;",
+                  "// TODO: find reset hole position",
+                  "let INNER_HOLED_COORDS = [[1,1],[1,3],[4,1],[4,3],[8,1],[8,3],[11,1],[11,3]];",
+                  "",
+                  "let KEY_HOLE_COORDS = [];",
+                  "// for (let i=0; i<KEY_X; i++){",
+                  "//     for (let j=0; j<KEY_Y; j++){",
+                  "//         KEY_HOLE_COORDS.push([i,j]);",
+                  "//     }",
+                  "// }",
+                  "// console.log(KEY_HOLE_COORDS);",
+                  "// sdf;",
+                  "let KEY_HOLE_DIAM = 6;",
+                  "let KET_HOLE_INNER_DIAM = 4;",
+                  "",
+                  "let inner_len = KEY_X*NUM_KEYS_X;",
+                  "let inner_width = KEY_Y*NUM_KEYS_Y;",
+                  "",
+                  "let padded_inner_len = inner_len+(PCB_TOLERANCE*2);",
+                  "let padded_inner_width = inner_width+(PCB_TOLERANCE*2);",
+                  "",
+                  "let outer_len = padded_inner_len+(WALL_THICKNESS*2);",
+                  "let outer_width = padded_inner_width+(WALL_THICKNESS*2)+WALL_FOREHEAD;",
+                  "",
+                  "let inner_cutout = FilletEdges(",
+                  "    Translate([0,0,-FLOOR_HEIGHT], Box(padded_inner_len,padded_inner_width,WALL_HEIGHT,true)),",
+                  "    WALL_INNER_FILLET_RADIUS,",
+                  "    [0,2,4,6]",
+                  ");",
+                  "",
+                  "let hole_cutouts = KEY_HOLE_COORDS.map((coord)=>{",
+                  "    // Note: being lazy with setting the hole height",
+                  "    let center_x = NUM_KEYS_X/2 // Thankfully result is still a whole number after division",
+                  "    let center_y = NUM_KEYS_Y/2",
+                  "    let diff_x = (coord[0] - center_x)*KEY_X",
+                  "    let diff_y = (coord[1] - center_y)*KEY_Y",
+                  "    let hole = Offset(Box(KEY_HOLE_DIAM,KEY_HOLE_DIAM,WALL_HEIGHT,true),1);",
+                  "    return Translate([diff_x,diff_y,WALL_HEIGHT/2],hole)",
+                  "});",
+                  "",
+                  "let outer_body = Translate([0,WALL_FOREHEAD/2,0],Box(outer_len,outer_width,WALL_HEIGHT+FLOOR_HEIGHT,true));",
+                  "outer_body = FilletEdges(",
+                  "    outer_body,",
+                  "    WALL_OUTER_FILLET_RADIUS,",
+                  "    [0,2,4,6]",
+                  ");",
+                  "outer_body = FilletEdges(",
+                  "    outer_body,",
+                  "    WALL_OUTER_UPPER_RADIUS,",
+                  "    [10]",
+                  ");",
+                  "outer_body = FilletEdges(",
+                  "    outer_body,",
+                  "    WALL_OUTER_LOWER_RADIUS,",
+                  "    [11]",
+                  ");",
+                  "",
+                  "",
+                  "// let usb_cutout = Translate([(-(NUM_KEYS_X/2)*KEY_X)+30,((NUM_KEYS_Y/2)*KEY_Y),-4],Offset(Box(14.5-1,10-1,7-1,true),1))",
+                  "",
+                  "let keyboard_case = Difference(outer_body,[inner_cutout,...hole_cutouts])",
+                  "",
+                  "",
+                  ""
+                ]
+              },
+              "width": 50,
+              "isClosable": false,
+              "reorderEnabled": true
+            }
+          ]
+        },
+        {
+          "type": "column",
+          "isClosable": true,
+          "reorderEnabled": true,
+          "title": "",
+          "width": 50,
+          "content": [
+            {
+              "type": "stack",
+              "height": 80,
+              "isClosable": true,
+              "reorderEnabled": true,
+              "title": "",
+              "activeItemIndex": 0,
+              "content": [
+                {
+                  "type": "component",
+                  "componentName": "cascadeView",
+                  "title": "CAD View",
+                  "componentState": {
+                    "componentName": "cascadeView",
+                    "MeshRes": 0.1,
+                    "Cache?": true,
+                    "GroundPlane?": true,
+                    "Grid?": true,
+                    "Radius": 30
+                  },
+                  "isClosable": false,
+                  "reorderEnabled": true
+                }
+              ]
+            },
+            {
+              "type": "stack",
+              "height": 20,
+              "isClosable": true,
+              "reorderEnabled": true,
+              "title": "",
+              "activeItemIndex": 0,
+              "content": [
+                {
+                  "type": "component",
+                  "componentName": "console",
+                  "title": "Console",
+                  "componentState": {},
+                  "height": 20,
+                  "isClosable": false,
+                  "reorderEnabled": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "isClosable": true,
+  "reorderEnabled": true,
+  "title": "",
+  "openPopouts": [],
+  "maximisedItemId": null
+}

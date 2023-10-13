@@ -1,0 +1,244 @@
+20:12:50 kicad-kle-placer-master.kle_placer_action 416: Plugin executed with python version: '3.8.2 (v3.8.2:7b3ab5921f, Feb 24 2020, 17:52:18) \n[Clang 6.0 (clang-600.0.57)]'
+20:13:00 kicad-kle-placer-master.kle_placer_action 431: User layout: Keyboard(meta=KeyboardMetadata(author='', backcolor='#eeeeee', background=None, name='', notes='', radii='', switchBrand='', switchMount='', switchType=''), keys=[Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=0.0, y=0.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=1.0, y=0.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=2.0, y=0.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=3.0, y=0.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=4.0, y=0.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=7.0, y=0.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=8.0, y=0.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=9.0, y=0.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=10.0, y=0.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=11.0, y=0.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=0.0, y=1.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=1.0, y=1.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=2.0, y=1.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=3.0, y=1.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=4.0, y=1.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=7.0, y=1.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=8.0, y=1.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=9.0, y=1.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=10.0, y=1.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=11.0, y=1.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=0.0, y=2.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=1.0, y=2.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=2.0, y=2.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=3.0, y=2.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=4.0, y=2.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=7.0, y=2.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=8.0, y=2.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=9.0, y=2.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=10.0, y=2.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=11.0, y=2.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=0.0, y=3.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=1.0, y=3.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=2.0, y=3.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=3.0, y=3.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=4.0, y=3.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=7.0, y=3.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=8.0, y=3.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=9.0, y=3.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=10.0, y=3.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st=''), Key(color='#cccccc', labels=['', '', '', '', '', '', '', '', '', '', '', ''], textColor=[None, None, None, None, None, None, None, None, None, None, None, None], textSize=[None, None, None, None, None, None, None, None, None, None, None, None], default=_inner_Key_default(textColor='#000000', textSize=3), x=11.0, y=3.0, width=1.0, height=1.0, x2=0.0, y2=0.0, width2=1.0, height2=1.0, rotation_x=0.0, rotation_y=0.0, rotation_angle=0.0, decal=False, ghost=False, stepped=False, nub=False, profile='', sm='', sb='', st='')])
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW1 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D1 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D1 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW1 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S1 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW1 footprint position: (90000000, 60000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D1 footprint position: (90000000, 65000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D1 footprint: rotationReference: (90000000, 60000000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D2 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW2 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S2 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW2 footprint position: (109050000, 60000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D2 footprint position: (109050000, 65000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D2 footprint: rotationReference: (109050000, 60000000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D3 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW3 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S3 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW3 footprint position: (128100000, 60000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D3 footprint position: (128100000, 65000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D3 footprint: rotationReference: (128100000, 60000000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D4 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW4 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S4 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW4 footprint position: (147150000, 60000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D4 footprint position: (147150000, 65000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D4 footprint: rotationReference: (147150000, 60000000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D5 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW5 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S5 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW5 footprint position: (166200000, 60000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D5 footprint position: (166200000, 65000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D5 footprint: rotationReference: (166200000, 60000000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D6 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW6 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S6 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW6 footprint position: (223350000, 60000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D6 footprint position: (223350000, 65000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D6 footprint: rotationReference: (223350000, 60000000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D7 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW7 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S7 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW7 footprint position: (242400000, 60000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D7 footprint position: (242400000, 65000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D7 footprint: rotationReference: (242400000, 60000000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D8 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW8 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S8 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW8 footprint position: (261450000, 60000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D8 footprint position: (261450000, 65000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D8 footprint: rotationReference: (261450000, 60000000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D9 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW9 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S9 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW9 footprint position: (280500000, 60000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D9 footprint position: (280500000, 65000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D9 footprint: rotationReference: (280500000, 60000000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D10 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW10 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S10 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW10 footprint position: (299550000, 60000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D10 footprint position: (299550000, 65000000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D10 footprint: rotationReference: (299550000, 60000000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D11 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW11 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S11 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW11 footprint position: (90000000, 79050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D11 footprint position: (90000000, 84050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D11 footprint: rotationReference: (90000000, 79050000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D12 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW12 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S12 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW12 footprint position: (109050000, 79050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D12 footprint position: (109050000, 84050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D12 footprint: rotationReference: (109050000, 79050000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D13 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW13 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S13 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW13 footprint position: (128100000, 79050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D13 footprint position: (128100000, 84050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D13 footprint: rotationReference: (128100000, 79050000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D14 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW14 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S14 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW14 footprint position: (147150000, 79050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D14 footprint position: (147150000, 84050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D14 footprint: rotationReference: (147150000, 79050000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D15 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW15 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S15 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW15 footprint position: (166200000, 79050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D15 footprint position: (166200000, 84050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D15 footprint: rotationReference: (166200000, 79050000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D16 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW16 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S16 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW16 footprint position: (223350000, 79050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D16 footprint position: (223350000, 84050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D16 footprint: rotationReference: (223350000, 79050000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D17 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW17 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S17 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW17 footprint position: (242400000, 79050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D17 footprint position: (242400000, 84050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D17 footprint: rotationReference: (242400000, 79050000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D18 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW18 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S18 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW18 footprint position: (261450000, 79050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D18 footprint position: (261450000, 84050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D18 footprint: rotationReference: (261450000, 79050000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D19 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW19 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S19 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW19 footprint position: (280500000, 79050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D19 footprint position: (280500000, 84050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D19 footprint: rotationReference: (280500000, 79050000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D20 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW20 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S20 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW20 footprint position: (299550000, 79050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D20 footprint position: (299550000, 84050000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D20 footprint: rotationReference: (299550000, 79050000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D21 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW21 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S21 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW21 footprint position: (90000000, 98100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D21 footprint position: (90000000, 103100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D21 footprint: rotationReference: (90000000, 98100000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D22 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW22 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S22 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW22 footprint position: (109050000, 98100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D22 footprint position: (109050000, 103100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D22 footprint: rotationReference: (109050000, 98100000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D23 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW23 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S23 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW23 footprint position: (128100000, 98100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D23 footprint position: (128100000, 103100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D23 footprint: rotationReference: (128100000, 98100000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D24 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW24 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S24 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW24 footprint position: (147150000, 98100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D24 footprint position: (147150000, 103100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D24 footprint: rotationReference: (147150000, 98100000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D25 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW25 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S25 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW25 footprint position: (166200000, 98100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D25 footprint position: (166200000, 103100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D25 footprint: rotationReference: (166200000, 98100000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D26 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW26 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S26 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW26 footprint position: (223350000, 98100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D26 footprint position: (223350000, 103100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D26 footprint: rotationReference: (223350000, 98100000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D27 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW27 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S27 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW27 footprint position: (242400000, 98100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D27 footprint position: (242400000, 103100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D27 footprint: rotationReference: (242400000, 98100000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D28 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW28 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S28 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW28 footprint position: (261450000, 98100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D28 footprint position: (261450000, 103100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D28 footprint: rotationReference: (261450000, 98100000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D29 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW29 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S29 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW29 footprint position: (280500000, 98100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D29 footprint position: (280500000, 103100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D29 footprint: rotationReference: (280500000, 98100000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D30 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW30 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S30 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW30 footprint position: (299550000, 98100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D30 footprint position: (299550000, 103100000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D30 footprint: rotationReference: (299550000, 98100000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D31 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW31 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S31 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW31 footprint position: (90000000, 117150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D31 footprint position: (90000000, 122150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D31 footprint: rotationReference: (90000000, 117150000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D32 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW32 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S32 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW32 footprint position: (109050000, 117150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D32 footprint position: (109050000, 122150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D32 footprint: rotationReference: (109050000, 117150000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D33 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW33 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S33 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW33 footprint position: (128100000, 117150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D33 footprint position: (128100000, 122150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D33 footprint: rotationReference: (128100000, 117150000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D34 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW34 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S34 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW34 footprint position: (147150000, 117150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D34 footprint position: (147150000, 122150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D34 footprint: rotationReference: (147150000, 117150000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D35 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW35 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S35 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW35 footprint position: (166200000, 117150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D35 footprint position: (166200000, 122150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D35 footprint: rotationReference: (166200000, 117150000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D36 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW36 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S36 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW36 footprint position: (223350000, 117150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D36 footprint position: (223350000, 122150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D36 footprint: rotationReference: (223350000, 117150000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D37 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW37 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S37 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW37 footprint position: (242400000, 117150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D37 footprint position: (242400000, 122150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D37 footprint: rotationReference: (242400000, 117150000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D38 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW38 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S38 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW38 footprint position: (261450000, 117150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D38 footprint position: (261450000, 122150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D38 footprint: rotationReference: (261450000, 117150000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D39 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW39 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S39 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW39 footprint position: (280500000, 117150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D39 footprint position: (280500000, 122150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D39 footprint: rotationReference: (280500000, 117150000), rotationAngle: 0
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for D40 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for SW40 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 131: Searching for S40 footprint
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting SW40 footprint position: (299550000, 117150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 139: Setting D40 footprint position: (299550000, 122150000)
+20:13:00 kicad-kle-placer-master.kle_placer_action 147: Rotating D40 footprint: rotationReference: (299550000, 117150000), rotationAngle: 0
