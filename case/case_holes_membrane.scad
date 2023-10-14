@@ -221,56 +221,97 @@ module key_flexture(key_x, key_y, key_difference, spring_thickness) {
 module key_square() {
     spring_thickness = 0.5;
     key_height = 3;
-    key_difference = 2;
+    key_difference = 0.5;
     key_x = KEY_CUTOUT_X-key_difference;
     key_y = KEY_CUTOUT_Y-key_difference;
     union(){
-        translate([0,0,-key_height+PLATE_HEIGHT])
+        // translate([0,0,-key_height+PLATE_HEIGHT])
+        translate([0,0,0])
             union(){
-                linear_extrude(key_height)
-                    rounding2d(KEY_CUTOUT_RADIUS)
-                    square([key_x,key_y], center = true);
-            };
-        key_flexture(key_x, key_y, key_difference, spring_thickness);
-    }
+                difference(){
+                    linear_extrude(key_height)
+                        rounding2d(KEY_CUTOUT_RADIUS)
+                        square([key_x,key_y], center = true);
+                    translate([0,0,2])
+                        cylinder(2, r=2.5, center=true);
+                };
+                translate([0,0,2])
+                    cylinder(2, r=1, center=true);
+            }
+        // key_flexture(key_x, key_y, key_difference, spring_thickness);
+    }   
+}
+
+module key_square_no_pole() {
+    spring_thickness = 0.5;
+    key_height = 3;
+    key_difference = 0.5;
+    key_x = KEY_CUTOUT_X-key_difference;
+    key_y = KEY_CUTOUT_Y-key_difference;
+    union(){
+        translate([0,0,0])
+            union(){
+                difference(){
+                    linear_extrude(key_height)
+                        rounding2d(KEY_CUTOUT_RADIUS)
+                        square([key_x,key_y], center = true);
+                };
+            }
+    }   
 }
 
 module key_cutout_matrix() {
-    for (i = [0:NUM_KEYS_X-1]){
-        for (j = [0:NUM_KEYS_Y-1]){
-            if (i!=5 && i!=6){ // We don't want key cutouts on the middle cols
-                translate([KEY_LENGTH*(i-((NUM_KEYS_X/2)-0.5)),KEY_WIDTH*(j-(NUM_KEYS_Y/2)+0.5),0])
-                    key_cutout_square();
-            }    
+    union(){
+        for (i = [0:NUM_KEYS_X-1]){
+            for (j = [0:NUM_KEYS_Y-1]){
+                if (i!=5 && i!=6){ // We don't want key cutouts on the middle cols
+                    translate([KEY_LENGTH*(i-((NUM_KEYS_X/2)-0.5)),KEY_WIDTH*(j-(NUM_KEYS_Y/2)+0.5),0])
+                        key_cutout_square();
+                }    
+            }
         }
+        linear_extrude(key_height)
+            rounding2d(KEY_CUTOUT_RADIUS)
+            square([key_x,key_y], center = true);
     }
-}
-
-module key_matrix(){
-    for (i = [0:NUM_KEYS_X-1]){
-        for (j = [0:NUM_KEYS_Y-1]){
-            if (i!=5 && i!=6){ // We don't want key cutouts on the middle cols
-                translate([KEY_LENGTH*(i-((NUM_KEYS_X/2)-0.5)),KEY_WIDTH*(j-(NUM_KEYS_Y/2)+0.5),0])
-                    key_square();
-            }    
-        }
-    }
-}
-
-module key_silicone() {
     
 }
 
-module key_silicone_matrix(){
-    for (i = [0:NUM_KEYS_X-1]){
-        for (j = [0:NUM_KEYS_Y-1]){
-            if (i!=5 && i!=6){ // We don't want key cutouts on the middle cols
-                translate([KEY_LENGTH*(i-((NUM_KEYS_X/2)-0.5)),KEY_WIDTH*(j-(NUM_KEYS_Y/2)+0.5),0])
-                    key_square();
-            }    
+module key_matrix(){
+    union(){
+        for (i = [0:NUM_KEYS_X-1]){
+            for (j = [0:NUM_KEYS_Y-1]){
+                if (i!=5 && i!=6){ // We don't want key cutouts on the middle cols
+                    translate([KEY_LENGTH*(i-((NUM_KEYS_X/2)-0.5)),KEY_WIDTH*(j-(NUM_KEYS_Y/2)+0.5),0])
+                        key_square();
+                }    
+            }
         }
+        difference(){
+            union(){
+                translate([-3.5*KEY_WIDTH,0,2.5])
+                    linear_extrude(0.5)
+                    rounding2d(KEY_CUTOUT_RADIUS)
+                    square([KEY_LENGTH*5,KEY_WIDTH*4], center = true);
+                translate([3.5*KEY_WIDTH,0,2.5])
+                    linear_extrude(0.5)
+                    rounding2d(KEY_CUTOUT_RADIUS)
+                    square([KEY_LENGTH*5,KEY_WIDTH*4], center = true);
+            }
+            for (i = [0:NUM_KEYS_X-1]){
+                for (j = [0:NUM_KEYS_Y-1]){
+                    if (i!=5 && i!=6){ // We don't want key cutouts on the middle cols
+                        translate([KEY_LENGTH*(i-((NUM_KEYS_X/2)-0.5)),KEY_WIDTH*(j-(NUM_KEYS_Y/2)+0.5),0])
+                            key_square_no_pole();
+                    }    
+                }
+            }
+        }
+
+
     }
 }
+
 
 module screw_pole() {
     difference(){
@@ -409,7 +450,8 @@ module reset_cutout() {
         square([cutout_width, cutout_height], center=true);
 }
 
-if (true){
+
+module case_body() {
     difference(){
         union(){
             difference(){
@@ -436,6 +478,9 @@ if (true){
         screw_hole_matrix();
     }
 }
+
+
+
 // usb_cutout();
 //screen_cutout();
 
@@ -478,18 +523,27 @@ module case_floor() {
     }
 }
 
+
+if (false){
+    case_body();
+}
+
 if (false){
     case_floor();
 }
 
-if (true){
+if (false){
     screw_pole_matrix();
 }
 
-if (true){
+if (false){
     standoff_matrix();
 }
 
-if (false){
-    key_matrix();
+if (true){
+    difference(){
+        key_matrix();
+        screw_pole_matrix();
+        standoff_matrix();
+    }
 }
