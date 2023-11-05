@@ -1,3 +1,5 @@
 (fp_lib_table
   (lib (name "userlib")(type "KiCad")(uri "/Users/chriz/Documents/CAD/bunchiez40/pcb/userlib")(options "")(descr ""))
+  (lib (name "mcu")(type "KiCad")(uri "/Users/chriz/Documents/CAD/bunchiez40/pcb/userlib/kleeb/mcu.pretty")(options "")(descr ""))
+  (lib (name "display")(type "KiCad")(uri "/Users/chriz/Documents/CAD/bunchiez40/pcb/userlib/kleeb/display.pretty")(options "")(descr ""))
 )

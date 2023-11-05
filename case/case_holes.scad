@@ -335,7 +335,7 @@ module standoff() {
         linear_extrude(4.5)
             circle(1.5);
             
-        translate([0,0,3])
+        translate([0,0,0])
             linear_extrude(SCREW_POLE_INNER_HEIGHT)
             circle(SCREW_POLE_INNER_RADIUS);
     }
@@ -363,13 +363,13 @@ module standoff_matrix() {
 
 module usb_cutout() {
     cutout_width = 11;
-    cutout_height = 5;
+    cutout_height = 9;
     
-    cutout_pos_height = 4.5;
+    cutout_pos_height = 6.5;
     
     rotate([90,0,0])
         translate([0,cutout_pos_height,-40])
-        linear_extrude(TOTAL_WALL_WIDTH+0.01+20)
+        linear_extrude(TOTAL_WALL_WIDTH+0.01+25)
         rounding2d(1.0)
         square([cutout_width, cutout_height], center=true);
 }
@@ -386,8 +386,8 @@ module middle_plate_cutout() {
 
 
 module switch_cutout() {
-    cutout_width = 16;
-    cutout_height = 32;
+    cutout_width = 12.5;
+    cutout_height = 40;
     
     cutout_pos_height = FLOOR_HEIGHT + 2;
     
@@ -435,13 +435,15 @@ if (true){
         reset_cutout();
         screw_hole_matrix();
     }
+    screw_pole_matrix();
+    standoff_matrix();
 }
 // usb_cutout();
 //screen_cutout();
 
 
 module case_floor_holes() {
-    m2_hole_radius = (2.2/2);
+    m1_6_hole_radius = (2/2);
 
     for (i = [0:NUM_KEYS_X]){
         for (j = [0:NUM_KEYS_Y]){
@@ -454,7 +456,7 @@ module case_floor_holes() {
                 (i==11 && j==3)
             ){
                 translate([KEY_LENGTH*(i-((NUM_KEYS_X/2))),KEY_WIDTH*(j-(NUM_KEYS_Y/2)),0])
-                    circle(m2_hole_radius);
+                    circle(m1_6_hole_radius);
             }    
         }
     }
@@ -464,17 +466,22 @@ module case_floor_holes() {
 module case_floor() {
     plate_height = 1.57;
     margin = 1;
-    
-    translate([0,0,CASE_INNER_WALL_HEIGHT+0.01+0])
     difference(){
-        linear_extrude(plate_height)
-            rounding2d(INNER_FILLET_RADIUS)
-            // Want the plate to rest in the middle of the case lip,
-            // hence we subtract half of the inner wall width once on each side
-            square([CASE_INNER_WALL_LENGTH-(INNER_WALL_WIDTH*2/2),CASE_INNER_WALL_WIDTH-(INNER_WALL_WIDTH*2/2)], center = true);
-            //square([CASE_INNER_WALL_LENGTH,CASE_INNER_WALL_WIDTH], center = true);
-        linear_extrude(plate_height+0.01)
-            case_floor_holes();
+        translate([0,0,CASE_INNER_WALL_HEIGHT+0.01+0])
+            difference(){
+                linear_extrude(plate_height)
+                    rounding2d(INNER_FILLET_RADIUS)
+                    // Want the plate to rest in the middle of the case lip,
+                    // hence we subtract half of the inner wall width once on each side
+                    square([CASE_INNER_WALL_LENGTH-(INNER_WALL_WIDTH*2/2),CASE_INNER_WALL_WIDTH-(INNER_WALL_WIDTH*2/2)], center = true);
+                    //square([CASE_INNER_WALL_LENGTH,CASE_INNER_WALL_WIDTH], center = true);
+        //        linear_extrude(plate_height+0.01)
+        //            case_floor_holes();
+                
+                translate([0,0,-4])
+                    screw_hole_matrix();
+            }
+        // usb_cutout();
     }
 }
 
@@ -482,13 +489,6 @@ if (false){
     case_floor();
 }
 
-if (true){
-    screw_pole_matrix();
-}
-
-if (true){
-    standoff_matrix();
-}
 
 if (false){
     key_matrix();

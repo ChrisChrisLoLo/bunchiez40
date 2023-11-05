@@ -150,8 +150,10 @@ FLOOR_HEIGHT = 1.6; // Height of the PCB bottom
 CASE_UPPER_HEIGHT = 0; // Height of the wall above the plate
 CASE_INNER_WALL_HEIGHT = PLATE_HEIGHT+10; //TODO; can probably be lower
 CASE_OUTER_WALL_HEIGHT = CASE_INNER_WALL_HEIGHT+FLOOR_HEIGHT+CASE_UPPER_HEIGHT; // Height of the outer case
-SCREW_POLE_HEIGHT = CASE_INNER_WALL_HEIGHT;
-SCREW_POLE_INNER_HEIGHT = SCREW_POLE_HEIGHT - 3.5;
+PCB_HEIGHT = 1.6;
+MOUSE_SWITCH_HEIGHT = 7.3;
+SCREW_POLE_HEIGHT = CASE_INNER_WALL_HEIGHT-PCB_HEIGHT-MOUSE_SWITCH_HEIGHT;
+SCREW_POLE_INNER_HEIGHT = 2; //SCREW_POLE_HEIGHT - 3.5;
 
 SCREW_POLE_OUTER_RADIUS = 3.7/2;
 SCREW_POLE_INNER_RADIUS = 1.6/2;
@@ -185,34 +187,40 @@ module key_cutout_square() {
 module key_flexture(key_x, key_y, key_difference, spring_thickness) {
     base_thickness = 0; // base thickness is used to give more strength for the base
 
-    linear_extrude(0.2)
-        union(){
-            // NOTE: springs should be turned into a module
-            // towards key
-            translate([-KEY_CUTOUT_X/4,(+key_y/2)+((key_difference/2)/2)+(spring_thickness/2),0])
-                square([spring_thickness+base_thickness, key_difference/2], center = true);
-            translate([+KEY_CUTOUT_X/4,(+key_y/2)+((key_difference/2)/2)+(spring_thickness/2),0])
-                square([spring_thickness+base_thickness, key_difference/2], center = true);
-            // towards cutout
-            translate([+KEY_CUTOUT_X/4,(+key_y/2)+((key_difference/2)/2)-(spring_thickness/2),0])
-                square([spring_thickness, key_difference/2], center = true);
-            translate([-KEY_CUTOUT_X/4,(+key_y/2)+((key_difference/2)/2)-(spring_thickness/2),0])
-                square([spring_thickness, key_difference/2], center = true);
-            // re-enforcement
-            
-            translate([0,(+key_y/2)+0.2,0])
-                square([key_x-1.5, 0.5], center = true);
-        };
+//    linear_extrude(0.2)
+//        union(){
+//            // NOTE: springs should be turned into a module
+//            // towards key
+//            translate([-KEY_CUTOUT_X/4,(+key_y/2)+((key_difference/2)/2)+(spring_thickness/2),0])
+//                square([spring_thickness+base_thickness, key_difference/2], center = true);
+//            translate([+KEY_CUTOUT_X/4,(+key_y/2)+((key_difference/2)/2)+(spring_thickness/2),0])
+//                square([spring_thickness+base_thickness, key_difference/2], center = true);
+//            // towards cutout
+//            translate([+KEY_CUTOUT_X/4,(+key_y/2)+((key_difference/2)/2)-(spring_thickness/2),0])
+//                square([spring_thickness, key_difference/2], center = true);
+//            translate([-KEY_CUTOUT_X/4,(+key_y/2)+((key_difference/2)/2)-(spring_thickness/2),0])
+//                square([spring_thickness, key_difference/2], center = true);
+//            // re-enforcement
+//            
+//            translate([0,(+key_y/2)+0.2,0])
+//                square([key_x-1.5, 0.5], center = true);
+//        };
     
     // tab on key to prevent it from lifting out of the case
-    tab_thickness = 0.5;
+    tab_thickness_1 = 0.5;
     translate([0,(-key_y/2),0.7])
-        linear_extrude(tab_thickness)
+        linear_extrude(tab_thickness_1)
         square([5,1.4], center = true);
         
-    tab_thickness = 0.5;
+//    tab_thickness = 1.5;
+//    translate([0,(-key_y/2)+0.5,0.7])
+//        linear_extrude(tab_thickness)
+//        square([5,0.5], center = true);
+//    
+        
+    tab_thickness_2 = 0.5;
     translate([0,(-key_y/2)-(key_difference/2)])
-        linear_extrude(tab_thickness)
+        linear_extrude(tab_thickness_2)
         
         square([5,1.4], center = true);
 }
@@ -262,7 +270,8 @@ module screw_pole() {
         linear_extrude(SCREW_POLE_HEIGHT)
             circle(SCREW_POLE_OUTER_RADIUS);
         
-        translate([0,0,height_diff])
+        // translate([0,0,-height_diff])
+        translate([0,0,-height_diff])
         linear_extrude(SCREW_POLE_INNER_HEIGHT)
             circle(SCREW_POLE_INNER_RADIUS);
     }
@@ -274,12 +283,14 @@ module screw_pole_matrix() {
             if (
                 (i==1  && j==1)  ||
                 (i==11 && j==1)  ||
-                (i==4  && j==2)  ||
-                (i==8  && j==2)  ||
+                (i==4  && j==1)  ||
+                (i==8  && j==1)  ||
+                (i==4  && j==3)  ||
+                (i==8  && j==3)  ||
                 (i==1  && j==3)  ||
                 (i==11 && j==3)
             ){
-                translate([KEY_LENGTH*(i-((NUM_KEYS_X/2))),KEY_WIDTH*(j-(NUM_KEYS_Y/2)),0])
+                translate([KEY_LENGTH*(i-((NUM_KEYS_X/2))),KEY_WIDTH*(j-(NUM_KEYS_Y/2)),(CASE_OUTER_WALL_HEIGHT-FLOOR_HEIGHT)])
                     screw_pole();
             }    
         }
@@ -334,34 +345,103 @@ module reset_cutout() {
         square([cutout_width, cutout_height], center=true);
 }
 
-if (true){
-    difference(){
-        union(){
-            difference(){
-                case_inner_square(PLATE_HEIGHT,INNER_FILLET_RADIUS);
-                //middle_plate_cutout();
-            }
 
+// holes to mount plate to case
+module plate_case_hole() {
+    hole_radius = 1.6/2;
+    hole_height = 4;
+    
+    linear_extrude(hole_height)
+        circle(hole_radius);
+}
 
-            difference(){
-                case_inner_wall_square(CASE_INNER_WALL_HEIGHT,INNER_FILLET_RADIUS);
-                case_inner_square(CASE_INNER_WALL_HEIGHT+0.01,INNER_FILLET_RADIUS);
+module plate_case_holes() {
+
+    hole_offset = TOTAL_WALL_WIDTH/2;
+    
+    for (i = [0:NUM_KEYS_X]){
+        for (j = [0:NUM_KEYS_Y]){
+            if ((i==0  && j==0)){
+                translate([KEY_LENGTH*(i-((NUM_KEYS_X/2)))-hole_offset,KEY_WIDTH*(j-(NUM_KEYS_Y/2))-hole_offset,0])
+                    plate_case_hole();
             }
-            
-            difference(){
-                topBottomFillet(b = -CASE_UPPER_HEIGHT, t = CASE_INNER_WALL_HEIGHT+FLOOR_HEIGHT, r = 2, s = 20, e=0)
-                case_outer_wall_square(CASE_OUTER_WALL_HEIGHT, OUTER_FILLET_RADIUS);
-                case_inner_wall_square(CASE_OUTER_WALL_HEIGHT+0.01, INNER_FILLET_RADIUS); // delete lower portion
+            if((i==0 && j==NUM_KEYS_Y)){
+                translate([KEY_LENGTH*(i-((NUM_KEYS_X/2)))-hole_offset,KEY_WIDTH*(j-(NUM_KEYS_Y/2))+hole_offset,0])
+                    plate_case_hole();
+            }
+            if((i==NUM_KEYS_X  && j==0)){
+                translate([KEY_LENGTH*(i-((NUM_KEYS_X/2)))+hole_offset,KEY_WIDTH*(j-(NUM_KEYS_Y/2))-hole_offset,0])
+                    plate_case_hole();
+            }
+            if((i==NUM_KEYS_X  && j==NUM_KEYS_Y)){
+                translate([KEY_LENGTH*(i-((NUM_KEYS_X/2)))+hole_offset,KEY_WIDTH*(j-(NUM_KEYS_Y/2))+hole_offset,0])
+                    plate_case_hole();
             }
         }
-        key_cutout_matrix();
-        usb_cutout();
-        switch_cutout();
-        reset_cutout();
     }
 }
-// usb_cutout();
-//screen_cutout();
+
+//plate_case_holes()
+
+// Assembly
+
+show_lower_body = true;
+show_upper_plate = false;
+
+if (true) {
+    difference(){
+        union(){
+            // lower case body
+            if (show_lower_body){
+                translate([0,0,+PLATE_HEIGHT])
+                    difference(){
+                        union(){
+                            difference(){
+                                topBottomFillet(b = -CASE_UPPER_HEIGHT, t = CASE_INNER_WALL_HEIGHT+FLOOR_HEIGHT, r = 2, s = 20, e=0)
+                                case_outer_wall_square(CASE_OUTER_WALL_HEIGHT, OUTER_FILLET_RADIUS);
+                                translate([0,0,-FLOOR_HEIGHT])
+                                case_inner_square(CASE_OUTER_WALL_HEIGHT+0.01, INNER_FILLET_RADIUS); // delete lower portion
+                            }
+                        }
+                        usb_cutout();
+                        reset_cutout();
+                    }
+                screw_pole_matrix();
+            }
+
+            // upper plate
+            if (show_upper_plate){
+                difference(){
+                    union(){
+                        difference(){
+                            case_inner_square(PLATE_HEIGHT,INNER_FILLET_RADIUS);
+                            //middle_plate_cutout();
+                        }
+
+
+                        difference(){
+                            case_inner_wall_square(PLATE_HEIGHT,INNER_FILLET_RADIUS);
+                            case_inner_square(PLATE_HEIGHT+0.01,INNER_FILLET_RADIUS);
+                        }
+                        
+                        difference(){
+                            topBottomFillet(b = -PLATE_HEIGHT, t = PLATE_HEIGHT+FLOOR_HEIGHT, r = 2, s = 20, e=0)
+                            case_outer_wall_square(PLATE_HEIGHT, OUTER_FILLET_RADIUS);
+                            case_inner_wall_square(PLATE_HEIGHT+0.01, INNER_FILLET_RADIUS); // delete lower portion
+                        }
+                    }
+                    key_cutout_matrix();
+                    switch_cutout();
+                }
+                key_matrix();
+            }
+            // usb_cutout();
+            //screen_cutout();
+        }
+        plate_case_holes();
+    }
+}
+
 
 
 module case_floor_holes() {
@@ -400,12 +480,4 @@ module case_floor() {
         linear_extrude(plate_height+0.01)
             case_floor_holes();
     }
-}
-
-if (false){
-    case_floor();
-}
-
-if (true){
-    key_matrix();
 }

@@ -145,10 +145,12 @@ CASE_INNER_WALL_WIDTH = CASE_INNER_WIDTH + (INNER_WALL_WIDTH*2);
 CASE_OUTER_WALL_LENGTH = CASE_INNER_WALL_LENGTH + (OUTER_WALL_WIDTH*2);
 CASE_OUTER_WALL_WIDTH = CASE_INNER_WALL_WIDTH + (OUTER_WALL_WIDTH*2);
 
+KEY_HEIGHT_OFFSET = 4.8;
+
 PLATE_HEIGHT = 1.2; // Height of the integrated plate
 FLOOR_HEIGHT = 1.6; // Height of the PCB bottom
 CASE_UPPER_HEIGHT = 0; // Height of the wall above the plate
-CASE_INNER_WALL_HEIGHT = PLATE_HEIGHT+7; //TODO; can probably be lower
+CASE_INNER_WALL_HEIGHT = PLATE_HEIGHT+7+KEY_HEIGHT_OFFSET; //TODO; can probably be lower
 CASE_OUTER_WALL_HEIGHT = CASE_INNER_WALL_HEIGHT+FLOOR_HEIGHT+CASE_UPPER_HEIGHT; // Height of the outer case
 SCREW_POLE_HEIGHT = CASE_INNER_WALL_HEIGHT;
 // no holes
@@ -156,6 +158,8 @@ SCREW_POLE_INNER_HEIGHT = SCREW_POLE_HEIGHT - 3.5;
 
 SCREW_POLE_OUTER_RADIUS = 3.1/2;
 SCREW_POLE_INNER_RADIUS = 1.6/2;
+
+
 
 // Modules
 module case_inner_square(height, corner_radius) {
@@ -373,10 +377,10 @@ module screw_hole_matrix() {
 module standoff() {
     height_diff = SCREW_POLE_HEIGHT-SCREW_POLE_INNER_HEIGHT;
     difference(){
-        linear_extrude(4.5)
+        linear_extrude(4.5+KEY_HEIGHT_OFFSET)
             circle(1.5);
             
-        translate([0,0,3])
+        translate([0,0,3+KEY_HEIGHT_OFFSET])
             linear_extrude(SCREW_POLE_INNER_HEIGHT)
             circle(SCREW_POLE_INNER_RADIUS);
     }
@@ -406,7 +410,7 @@ module usb_cutout() {
     cutout_width = 11;
     cutout_height = 5;
     
-    cutout_pos_height = 4.5;
+    cutout_pos_height = 4.5+3;
     
     rotate([90,0,0])
         translate([0,cutout_pos_height,-40])
@@ -524,7 +528,7 @@ module case_floor() {
 }
 
 
-if (false){
+if (true){
     case_body();
 }
 
@@ -532,15 +536,15 @@ if (false){
     case_floor();
 }
 
-if (false){
+if (true){
     screw_pole_matrix();
 }
 
-if (false){
+if (true){
     standoff_matrix();
 }
 
-if (true){
+if (false){
     difference(){
         key_matrix();
         screw_pole_matrix();
