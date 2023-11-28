@@ -362,15 +362,15 @@ module standoff_matrix() {
 }
 
 module usb_cutout() {
-    cutout_width = 11;
-    cutout_height = 9;
+    cutout_width = 13;
+    cutout_height = 11;
     
-    cutout_pos_height = 6.5;
+    cutout_pos_height = 7.5;
     
     rotate([90,0,0])
         translate([0,cutout_pos_height,-40])
         linear_extrude(TOTAL_WALL_WIDTH+0.01+25)
-        rounding2d(1.0)
+        rounding2d(3.0)
         square([cutout_width, cutout_height], center=true);
 }
 
