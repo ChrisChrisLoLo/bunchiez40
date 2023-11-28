@@ -36,13 +36,23 @@ You can find the PCB source files in the `pcb` folder. The BOM files can be foun
 - 1 Aluminum CNC upper case or 3DP upper case
 - 1 lower case. I 3D printed mine
 - 16 3mm M1.6 screws (go for flathead for a flush fit, though other head types should also work)
-- 8 1-2mm bumpons (something like Sj5302 is a good place to start)
+- 4-8 (ideally 8) 1-2mm bumpons (something like Sj5302 is a good place to start)
 - 1 0.91 inch OLED
 - 1 rp2040-zero pcb
 - 40 Kailh/Huano 7.3mm mute switches (ideally with some spares)
 - 40 LL4148 diodes (ideally with some spares)
 
 ## Assembly
+Build guide coming soon. For now, hopefully the footprints make it clear as to what should go where. Note that the rp2040-zero should be placed in such a way that the MCU is on "top" of the pcb when the assembly is face up, like such.
+![photo of assembly](https://raw.githubusercontent.com/ChrisChrisLoLo/bunchiez40/main/photos/PXL_20231105_230039555.jpg)
+
+Once all parts have been assembled, the board can be screwed onto the top of the case with 8 screws.
+
+The firmware should then be flashed onto the board.
+
+The bottom of the board can then be screwed to the case. My recommendation is to put two bumpons on each corner of the bottom of the case, one above the screw and one beside the screw. This helps maximize stability.  
 
 ## Firmware
+QMK Firmware can be found here
+https://github.com/ChrisChrisLoLo/vial-qmk/tree/sporewoh/keyboards/sporewoh/bunchiez40
 
