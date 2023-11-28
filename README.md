@@ -15,8 +15,13 @@ More details about my research on mouse switches and experience with the bunchie
 
 Case files include STLs, STEP files, as well as source OpenSCAD files that can be modified. The OpenSCAD models do not have fillets on them
 
+![some bunchiez40](https://raw.githubusercontent.com/ChrisChrisLoLo/bunchiez40/main/photos/PXL_20231127_025242231.jpg)
+
+
 # Case
 The case files can be found in the `case` directory. The particular files you'll want are the `case_holes` file for the top part of the case, and the `case_holes_floor` file for the bottom part. CNC and 3DP works with the top part of the case, and I chose to 3DP my case bottom.
+
+![bunchiez40 in my hand](https://raw.githubusercontent.com/ChrisChrisLoLo/bunchiez40/main/photos/PXL_20231125_222231348.jpg)
 
 ## PCB
 You can find the PCB source files in the `pcb` folder. The BOM files can be found in this folder.
